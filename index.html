@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="syles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Library </title>
+</head>
+<body class="background">
+
+    <div class="title"> 
+    
+    <h1> Library</h1>
+
+    </div>
+
+
+    <h4> made by jediknight813 on github</h4>
+
+    <div id="add_new_book" class="add_new_book">
+
+        Book title: <input type="text" id="BookTitle">
+        Author name: <input type="text" id="AuthorName">
+        Number of pages: <input type="text" id="NumberOfPages">
+        finshed: <input type="checkbox" id="Finished">
+        <button onclick="add_book()" class="button"> submit </button>
+
+
+    </div>
+
+    <div id="#book_container" class="book_list">  </div>
+
+    </div>
+
+
+
+
+    <script>
+        var booklist = []
+
+
+        function add_book() {
+            book_name = document.getElementById('BookTitle').value
+            author_name = document.getElementById('AuthorName').value
+            number_pages = document.getElementById('NumberOfPages').value
+            book_finished = document.getElementById('Finished').value
+
+            var div = document.createElement("div");
+            let btn = document.createElement("button");
+            var check_box = document.createElement('input')
+            check_box.type = 'checkbox'
+            check_box.className = 'checkbox'
+
+            if (document.getElementById('Finished').checked == true) {
+                check_box.checked = true
+            }
+
+            btn.onclick = function(div, btn){
+                this.parentNode.remove(this.parentNode)
+                this.remove(this)
+                reset_input_for_new_book()
+            }
+            btn.innerHTML = "Remove book"
+            btn.className = 'button'
+            div.className = "book_text"
+            div.innerText = " Title: " + book_name + " Author: " + author_name + " Number of pages: " + number_pages + " Finished: " + "         "
+            div.appendChild(check_box)
+            div.appendChild(btn)
+            document.getElementById("#book_container").appendChild(div)
+            reset_input_for_new_book()
+        }
+
+
+        function reset_input_for_new_book() {
+            document.getElementById('BookTitle').value = ''
+            document.getElementById('AuthorName').value = ''
+            document.getElementById('NumberOfPages').value = ''
+            document.getElementById('Finished').checked = false;
+
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,101 @@
+.title {
+    display: flex;
+    margin: auto;
+    width: 40000;
+    height: 260px;
+    position: relative;
+    background-color: rgb(66, 60, 60);
+    z-index: 2;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 90px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.background {
+
+    background-color: #5c5c5c;
+    z-index: 2;
+}
+
+.add_new_book {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 400;
+    width: 400;
+    font-family: sans-serif;
+    z-index: 4;
+}
+
+.page {
+    position: sticky;
+    margin-top: -50%;
+    margin-left: -50%;
+    right: -1050px;
+    height: 10000px;
+    width: 1200px;
+    background-color: #575050;
+    z-index: 0;
+}
+
+h4 {
+    margin-top: -6%;
+    position: relative;
+    text-align: center;
+    color: white;
+    top: -120;
+    right: -600;
+    z-index: 5;
+}
+
+h4:hover {
+    font-size: large;
+}
+
+.book_list {
+    position: relative;
+    text-align: center;
+    z-index: 5;
+    margin: auto;
+}
+
+.book_text {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: xx-large;
+    color: white;
+    font-family: sans-serif;
+    width: 900px;
+    height: 100px;
+    background-color: rgb(66, 60, 60);
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.button {
+    background-color: #5f5757;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .button:hover {
+    font-size: large;
+  }
+
+  .checkbox {
+      padding: 20;
+      height: 30px;
+      width: 30px;
+      padding-left: 20px;
+  }
